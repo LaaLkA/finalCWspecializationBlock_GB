@@ -1,0 +1,12 @@
+laalka@VM:~$ sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ focal mysql-apt-config'
+sudo apt-get update
+
+laalka@VM:~$ sudo apt-get install mysql-server
+
+laalka@VM:~$ cd Загрузки
+
+Загрузил .deb пакет Google Chrome
+
+laalka@VM:~/Загрузки$ sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+laalka@VM:~/Загрузки$ sudo dpkg -r google-chrome-stable

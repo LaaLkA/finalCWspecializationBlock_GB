@@ -1,0 +1,52 @@
+laalka@VM:~/finalTest$ sudo sh -c ' cat > homeAnimals.txt << EOF
+Dog
+Cat
+Humster
+EOF'
+
+laalka@VM:~/finalTest$ sudo sh -c ' cat > packAnimals.txt << EOF
+Horse
+Camel
+Donkey 
+EOF'
+
+laalka@VM:~/finalTest$ ls -ll
+итого 8
+-rw-r--r-- 1 root root 16 июл 31 11:07 homeAnimals.txt
+-rw-r--r-- 1 root root 19 июл 31 11:08 packAnimals.txt
+
+laalka@VM:~/finalTest$ sudo sh -c ' cat homeAnimals.txt packAnimals.txt > Animals.txt'
+
+laalka@VM:~/finalTest$ ls -ll
+итого 12
+-rw-r--r-- 1 root root 35 июл 31 11:10 Animals.txt
+-rw-r--r-- 1 root root 16 июл 31 11:07 homeAnimals.txt
+-rw-r--r-- 1 root root 19 июл 31 11:08 packAnimals.txt
+
+laalka@VM:~/finalTest$ cat Animals.txt 
+Dog
+Cat
+Humster
+Horse
+Camel
+Donkey
+
+laalka@VM:~/finalTest$ sudo sh -c 'mv Animals.txt humanFriends.txt'
+
+laalka@VM:~/finalTest$ ls -ll
+итого 12
+-rw-r--r-- 1 root root 16 июл 31 11:07 homeAnimals.txt
+-rw-r--r-- 1 root root 35 июл 31 11:10 humanFriends.txt
+-rw-r--r-- 1 root root 19 июл 31 11:08 packAnimals.txt
+
+laalka@VM:~/finalTest$ sudo mkdir Nursery
+
+laalka@VM:~/finalTest$ sudo sh -c 'mv humanFriends.txt Nursery/'
+
+laalka@VM:~/finalTest$ ls -ld Nursery/
+drwxr-xr-x 2 root root 4096 июл 31 11:26 Nursery/
+
+laalka@VM:~/finalTest$ ls -ll Nursery/
+итого 4
+-rw-r--r-- 1 root root 35 июл 31 11:10 humanFriends.txt
+
